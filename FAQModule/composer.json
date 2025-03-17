@@ -1,0 +1,30 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Title");
+?>{
+    "name": "nekomusume666/bitrix-testovoe",
+    "description": "FAQ Module for Bitrix",
+    "type": "bitrix-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nekomusume666",
+            "email": "ivishnikin@inbox.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^1.11"
+    },
+    "extra": {
+        "installer-paths": {
+            "bitrix/modules/FAQModule/": ["type:bitrix-module"]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Nekomusume666\\BitrixTestovoe\\": "install/"
+        }
+    }
+}
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
